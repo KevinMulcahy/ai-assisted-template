@@ -10,3 +10,9 @@ build/
 # Misc
 .DS_Store
 .env
+frontend/node_modules/
+node_modules/
+
+echo "venv/" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.pyc" >> .gitignore
