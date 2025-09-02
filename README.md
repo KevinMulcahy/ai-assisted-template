@@ -1,61 +1,113 @@
-﻿# AI Assisted Template
-🚀 AI-Assisted Template: Development Roadmap
+# AI-Assisted Template
 
-This template is designed for AI-assisted development using a modular, VIBE-aligned workflow to help you build full-stack apps efficiently and maintainably.
+## 🚀 Development Roadmap
 
-🎯 VIBE Coding Workflow
+This template is designed for **AI-assisted development** using a modular, **VIBE-aligned workflow** to help you build full-stack apps efficiently and maintainably.
 
-The 7-step VIBE workflow emphasizes planning, AI integration, vertical slicing, testing, refinement, and deployment:
+---
 
-🏗 Foundation Setup
+## 🎯 VIBE Coding Workflow
 
-Start with this template’s modular structure.
+The **7-step VIBE workflow** emphasizes planning, AI integration, vertical slicing, testing, refinement, and deployment:
 
-Python backend (backend/) and React frontend (frontend/) are preconfigured.
+### 🏗 Foundation Setup
 
-Provides a clean starting point for vertical slicing.
+* Start with this template’s modular structure.
+* Python backend (`backend/`) and React frontend (`frontend/`) are preconfigured.
+* Provides a clean starting point for vertical slicing.
 
-🤖 AI Integration
+### 🤖 AI Integration
 
-Place AI logic in backend/ai/.
+* Place AI logic in `backend/ai/`.
+* Store prompts, inference logic, or other AI-assisted features here.
+* Reuse functions to support multiple features.
 
-Store prompts, inference logic, or other AI-assisted features here.
+### 📝 Planning
 
-Reuse functions to support multiple features.
+* Use `docs/implementation-plan.md` to document feature ideas and steps.
+* Plan features as **vertical slices** (end-to-end functionality) instead of building horizontally.
 
-📝 Planning
+### 🔪 Vertical Slicing
 
-Use docs/implementation-plan.md to document feature ideas and steps.
+* Build small, complete features iteratively:
+  **Database → Backend → API → Frontend**.
+* Each slice should be independently functional and testable.
 
-Plan features as vertical slices (end-to-end functionality) instead of building horizontally.
+### 🧪 Testing
 
-🔪 Vertical Slicing
+* Add unit tests in `backend/tests/`.
+* Test AI logic, API routes, and utility functions.
+* Run frontend tests as applicable.
 
-Build small, complete features iteratively:
-Database → Backend → API → Frontend.
+### ✏️ Refinement
 
-Each slice should be independently functional and testable.
+* Improve AI-generated code for quality and maintainability.
+* Refactor modules and utilities as features evolve.
 
-🧪 Testing
+### 🚀 Deployment
 
-Add unit tests in backend/tests/.
+* Prepare backend and frontend for deployment.
+* Ensure endpoints are stable, CORS is configured, and frontend assets are built correctly.
 
-Test AI logic, API routes, and utility functions.
+---
 
-Run frontend tests as applicable.
+## ⚡ Getting Started
 
-✏️ Refinement
+### Clone the repository:
 
-Improve AI-generated code for quality and maintainability.
+```bash
+git clone https://github.com/KevinMulcahy/ai-assisted-template.git
+cd ai-assisted-template
+```
 
-Refactor modules and utilities as features evolve.
+### Install backend dependencies:
 
-🚀 Deployment
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+# or venv\Scripts\activate  # Windows
+pip install -r requirements.txt
+```
 
-Prepare backend and frontend for deployment.
+### Install frontend dependencies:
 
-Ensure endpoints are stable, CORS is configured, and frontend assets are built correctly.
+```bash
+cd frontend
+npm install
+```
 
-⚡ Getting Started
+### Run backend and frontend:
 
-Clone the repository:
+```bash
+# Backend
+python ../backend/app.py
+
+# Frontend (in separate terminal)
+npm start
+```
+
+### Access the API
+
+* Test API endpoint: `http://127.0.0.1:5000/api/message`
+* Connect frontend components to backend APIs.
+
+---
+
+## 📂 Folder Structure
+
+```
+backend/
+    app.py
+    ai/
+    utils/
+    config/
+    tests/
+frontend/
+    src/
+    public/
+docs/
+    implementation-plan.md
+README.md
+```
+
+* Supports **vertical slicing** and modular development.
